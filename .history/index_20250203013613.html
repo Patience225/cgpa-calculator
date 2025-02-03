@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>CGPA Calculator</title>
+</head>
+<body>
+  <div class="container">
+    <h1>CGPA Calculator</h1>
+    <form id="course-form">
+      <div id="course-container">
+        <div class="course-row">
+          <input type="text" placeholder="Course Title" required />
+          <input type="number" placeholder="Credit Hours" min="1" max="6" required />
+          <!-- The select options will be generated in JS -->
+          <select required>
+            <!-- Options will be injected via JS -->
+          </select>
+        </div>
+      </div>
+      <button type="button" id="add-course">Add Another Course</button>
+      <button type="submit">Calculate CGPA</button>
+      <button type="button" id="reset-form">Reset</button>
+    </form>
+
+    <!-- New Grade Mapping Section -->
+    <div id="grade-mapping">
+      <h2>Adjust Grade Mapping</h2>
+      <div class="mapping-row">
+        <label for="grade-A">A (70–100%):</label>
+        <input type="number" id="grade-A" value="5" step="0.1" required />
+      </div>
+      <div class="mapping-row">
+        <label for="grade-B">B (60–69%):</label>
+        <input type="number" id="grade-B" value="4" step="0.1" required />
+      </div>
+      <div class="mapping-row">
+        <label for="grade-C">C (50–59%):</label>
+        <input type="number" id="grade-C" value="3" step="0.1" required />
+      </div>
+      <div class="mapping-row">
+        <label for="grade-D">D (45–49%):</label>
+        <input type="number" id="grade-D" value="2" step="0.1" required />
+      </div>
+      <div class="mapping-row">
+        <label for="grade-E">E (40–44%):</label>
+        <input type="number" id="grade-E" value="1" step="0.1" required />
+      </div>
+      <div class="mapping-row">
+        <label for="grade-F">F (0–39%):</label>
+        <input type="number" id="grade-F" value="0" step="0.1" required />
+      </div>
+      <button type="button" id="update-mapping">Update Grade Options</button>
+    </div>
+
+    <div id="result"></div>
+    <h2>Course Summary</h2>
+    <div id="course-summary"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

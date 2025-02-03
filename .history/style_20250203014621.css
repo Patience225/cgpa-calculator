@@ -1,0 +1,121 @@
+/* Reset and Box Sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container Styling */
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h1, h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Course Row Styling */
+.course-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Ensure course row inputs share space equally */
+.course-row > input,
+.course-row > select {
+  flex: 1;
+}
+
+/* Button Styling */
+button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838; 
+}
+
+/* Grade Mapping Section */
+#grade-mapping {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #e9f7ef; 
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+}
+
+.mapping-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.mapping-row label {
+  flex: 1;
+  font-size: 0.95em;
+}
+
+.mapping-row input[type="number"] {
+  flex: 1;
+  margin-left: 10px;
+}
+
+/* Result and Summary Styling */
+#result {
+  margin: 20px 0;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+#course-summary {
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#course-summary p {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
